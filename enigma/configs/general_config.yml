@@ -1,0 +1,23 @@
+plug_board: 
+  e : m
+  h : l
+  p : z
+  r : j
+  s : v
+  u : q
+#                  abcdefghijklmnopqrstuvwxyz .,:
+reflector_setting: ejmzalyxvbwfcrquontspikhgd. :, 
+rotors_setting:
+#        abcdefghijklmnopqrstuvwxyz .,:
+  - name: Rotor_I
+    map: . :,jgdqoxuscamifrvtpnewkblzyh
+    pos: 2
+    notch: 10
+  - name: Rotor_II
+    map: ntzpsfbokmwrcjdivlaeyuxhgq. :,
+    pos: 1
+    notch: 3
+  - name: Rotor_III
+    map: jviubhtcdyakeqzposgxnrmwfl. :,
+    pos: 3
+    notch: 25
