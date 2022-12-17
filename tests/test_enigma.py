@@ -33,6 +33,4 @@ def test_many_key_press():
     text_enc = encryptor.process_message(text)
     for _ in range(iter_num):
         text_enc = encryptor.process_message(text_enc)
-    
-    assert True
 
