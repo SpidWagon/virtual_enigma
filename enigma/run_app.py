@@ -4,7 +4,7 @@ from enigma import Enigma
 from enigma.constants import CONFIG_FILE_PATH
 
 
-
+app = typer.Typer()
 
 @app.command()
 def process(text: str):
@@ -24,7 +24,6 @@ def help():
     )
 
 def main():
-    app = typer.Typer()
     app()
 
 if __name__ == "__main__":
