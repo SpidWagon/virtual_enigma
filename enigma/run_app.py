@@ -4,10 +4,8 @@ from enigma.constants import CONFIG_FILE_PATH
 
 RESET_CMD = "/rr"
 EXIT_CMD = "/exit"
-# ToDo
-# implements commands:
-# SHOW_CMD = "/show" 
-# HELP_CMD = "/help" 
+SHOW_CMD = "/show" 
+HELP_CMD = "/help" 
 
 
 def main():
@@ -21,6 +19,13 @@ def main():
         elif text.lower() == RESET_CMD:
             encryptor.set_rotor_config()
             print("Config reset \n")
+        elif text.lower() == SHOW_CMD:
+            encryptor.show_config()
+        elif text.lower() == HELP_CMD:
+            print(
+                "This is a placeholder of help command, but I swear here will be normal " + 
+                "help command soon"
+            )
         else:
             text_enc = encryptor.process_message(text)
             print(f'\nProccesed message:\n{text_enc}\n')

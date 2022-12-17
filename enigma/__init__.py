@@ -14,7 +14,7 @@ class RotorConfig(BaseModel):
 
 class Rotor():
     def __init__(self, config):
-        self.name = config.name
+        self._name = config.name
         self._map = config.map
         self._map_len = len(self._map)
         self._pos = config.pos
@@ -28,6 +28,14 @@ class Rotor():
     @property
     def notch(self):
         return self._notch
+    
+    @property
+    def name(self):
+        return self._name
+    
+    @property
+    def map(self):
+        return self._map
 
     def rotate_pos(self):
         self._pos += 1
@@ -60,7 +68,7 @@ class Enigma:
         self._config = config
         self._alphabet = ALPHABET
         self._alphabet_len = len(self._alphabet)
-        self._plug_board = config.plug_board
+        self._plug_board = config.plug_board.copy()
         self._plug_board.update({v: k for k, v in self._plug_board.items()})
         self._reflector = self._build_reflector(config.reflector_setting)
         self.set_rotor_config()
@@ -79,6 +87,24 @@ class Enigma:
             config = EnigmaConfig(**config)
         return cls(config)
 
+    def show_config(self):
+        print('Rotors config:')
+        for rotor in self._rotor_panel:
+            print(
+                f"{rotor.name} \t position: {rotor.position} \t notch: {rotor.notch} \t " +
+                f"map: {rotor.map}"
+            )
+        
+        plugboard_str = [f"{k} <-> {v}" for k, v in self._config.plug_board.items()]
+        print("\nPlugboard config: \n" + "\n".join(plugboard_str))
+        
+        print(
+            "\nReflector config:\n" +
+            ''.join(ALPHABET) + "\n" + 
+            '|' * self._alphabet_len + "\n" + 
+            self._config.reflector_setting
+        )
+    
     def set_rotor_config(self):
         self._rotor_panel = [Rotor(cfg) for cfg in self._config.rotors_setting]
         self._rotor_pos_list = [rotor.position for rotor in self._rotor_panel]
