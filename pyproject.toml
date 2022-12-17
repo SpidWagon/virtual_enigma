@@ -8,6 +8,9 @@ authors = ["Vladimir Chichkin <vovacickin3386@gmail.com>"]
 python = "^3.8"
 pydantic = "^1.10.2"
 PyYAML = "^6.0"
+typer = "0.3.2"
+colorama = "0.4.4"
+shellingham = "1.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
