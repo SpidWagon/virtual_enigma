@@ -1,27 +1,27 @@
 # Virtual Enigma
 
 ## Overview
-This project is an implementation of Enigma cypher machine. Just like 
-as the real Enigma this one can encrypt and decrypt messages. Also it can 
-be configured in similar way. You can change setting for plugboard,
-reflector and rotors. As for rotors, you can change the number of rotors,
-their letter mapping, start positions and turnover notch positions.
+This project is an implementation of the Enigma cypher machine. Just like as
+ the real Enigma, this one can encrypt and decrypt messages. It can also be
+ configured in a similar way: you can change settings for plugboard, reflector
+ and rotors. As for rotors, you can change their number, their letter mapping,
+ start positions and turnover notch positions.
 
 ## Installation proccess
 To try this project you'll need python and poetry package manager.
 
-After git clone  
+After `git clone`  
 ```
 cd <directory to which you cloned the project>
 poetry install
 poetry shell
 cd enigma
 ```
-Now you can encrypt and decrypt your messages
+And you will be able to encrypt and decrypt your messages.
 
 ## Usage
 To encrypt or decrypt messages you can run the same command `process`.  
-Example:
+Example of encryption and decryption of one phrase:
 
 ```
 python3 -m run_app process "weather is good today"
@@ -58,19 +58,18 @@ ejmzalyxvbwfcrquontspikhgd. :,
 ```
 
 ## Configuration
-When you want to change enigma setting you need to change the
+When you want to change the enigma setting you need to change the
 `enigma/general_config.yml` file.  
 Note several moments:   
 
 - In reflector and rotors settings the letters are listed as connected to
-alphabet order. For example, if the first letter of a rotor is E, this
-means that the A is mapped to the E.
-- Although plugboard setting in general_config.yml file is just a python
-dictionary, plugboard maps letters in both directions.
-- The notch position of last rotor doesn't affect anything since it's not
-used.
-- The real version of enigma didn't has punctuations (at least as I know), 
-but decided to add them.
+  alphabet order. For example, if the first letter of a rotor is E, this means
+  that the A is mapped to the E.
+- Although the plugboard setting in general_config.yml file is just a python
+  dictionary, plugboard maps letters in both directions.
+- The notch position of the last rotor doesn't matter since it's not used.
+- The real version of enigma did not have punctuation marks (as far as I know),
+  but I decided to add them.
 
 Example of config file:
 ```
