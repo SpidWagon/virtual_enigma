@@ -39,9 +39,10 @@ If you want to see what's in config of enigma you can use `show-cfg` command
 ```
 python3 -m run_app show-cfg
 Rotors config:
-Rotor_I 	 position: 2 	 notch: 10 	 map: . :,jgdqoxuscamifrvtpnewkblzyh
-Rotor_II 	 position: 1 	 notch: 3 	 map: ntzpsfbokmwrcjdivlaeyuxhgq. :,
-Rotor_III 	 position: 3 	 notch: 25 	 map: jviubhtcdyakeqzposgxnrmwfl. :,
+Rotor_I 	 position: 2 	 notch: 10 	 map: `. :,jgdqoxuscamifrvtpnewkblzyh`
+Rotor_II 	 position: 1 	 notch: 3 	 map: `ntzpsfbokmwrcjdivlaeyuxhgq. :,`
+Rotor_III 	 position: 3 	 notch: 25 	 map: `jviubhtcdyakeqzposgxnrmwfl. :,`
+
 
 Plugboard config:
 e <-> m
@@ -80,18 +81,18 @@ plug_board:
   r : j
   s : v
   u : q
-reflector_setting: ejmzalyxvbwfcrquontspikhgd. :, 
+reflector_setting: "ejmzalyxvbwfcrquontspikhgd. :,"
 rotors_setting:
   - name: Rotor_I
-    map: . :,jgdqoxuscamifrvtpnewkblzyh
+    map: ". :,jgdqoxuscamifrvtpnewkblzyh"
     pos: 2
     notch: 10
   - name: Rotor_II
-    map: ntzpsfbokmwrcjdivlaeyuxhgq. :,
+    map: "ntzpsfbokmwrcjdivlaeyuxhgq. :,"
     pos: 1
     notch: 3
   - name: Rotor_III
-    map: jviubhtcdyakeqzposgxnrmwfl. :,
+    map: "jviubhtcdyakeqzposgxnrmwfl. :,"
     pos: 3
     notch: 25
 ```

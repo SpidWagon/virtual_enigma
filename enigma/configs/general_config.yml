@@ -5,10 +5,10 @@ plug_board:
   r : j
   s : v
   u : q
-#                  abcdefghijklmnopqrstuvwxyz .,:
-reflector_setting: ejmzalyxvbwfcrquontspikhgd. :, 
+#                   abcdefghijklmnopqrstuvwxyz .,:
+reflector_setting: "ejmzalyxvbwfcrquontspikhgd. :,"
 rotors_setting:
-#        abcdefghijklmnopqrstuvwxyz .,:
+#         abcdefghijklmnopqrstuvwxyz .,:
   - name: Rotor_I
     map: ". :,jgdqoxuscamifrvtpnewkblzyh"
     pos: 2
