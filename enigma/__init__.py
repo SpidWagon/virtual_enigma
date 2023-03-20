@@ -92,7 +92,7 @@ class Enigma:
         for rotor in self._rotor_panel:
             print(
                 f"{rotor.name} \t position: {rotor.position} \t notch: {rotor.notch} \t " +
-                f"map: {rotor.map}"
+                f"map: `{rotor.map}`"
             )
         
         plugboard_str = [f"{k} <-> {v}" for k, v in self._config.plug_board.items()]
